@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-function formatDollarAmount(float $amount): string {
+function formatDollarAmount(float $amount): string 
+{
 
     $isNegative = $amount < 0;
 
@@ -10,6 +11,7 @@ function formatDollarAmount(float $amount): string {
 
 }
 
-function formatDate(string $date): string {
+function formatDate(string $date): string 
+{
     return date('M j, Y', strtotime($date));
 }

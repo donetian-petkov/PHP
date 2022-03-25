@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-function getTransactionalFiles(string $dirPath): array {
+function getTransactionalFiles(string $dirPath): array 
+{
 
     $files = [];
 
@@ -23,7 +24,8 @@ function getTransactionalFiles(string $dirPath): array {
 
 };
 
-function getTransactions(string $fileName, ?callable $transactionHandler = null): array {
+function getTransactions(string $fileName, ?callable $transactionHandler = null): array 
+{
 
     if(! file_exists($fileName)){
        trigger_error('File ' . $fileName . ' does not exist!', E_USER_ERROR);
@@ -54,7 +56,8 @@ function getTransactions(string $fileName, ?callable $transactionHandler = null)
 
 }
 
-function extractTransaction(array $transactionRow): array {
+function extractTransaction(array $transactionRow): array 
+{
 
     // through the extractTransaction we extract the information from the csv file
     // and we store that information as associative array
@@ -72,7 +75,8 @@ function extractTransaction(array $transactionRow): array {
 
 }
 
-function calculateTotals(array $transactions): array {
+function calculateTotals(array $transactions): array 
+{
 
     $totals = ['netTotal' => 0, 'totalIncome' => 0, 'totalExpense' => 0];
 
