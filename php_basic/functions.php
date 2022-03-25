@@ -1,12 +1,14 @@
 <?php
 
-function foo() {
+function foo() 
+{
     echo "Hello World";
 }
 
 foo();
 
-function bar() {
+function bar() 
+{
     return "Hello World";
 }
 
@@ -22,7 +24,8 @@ echo $x; // "Hello World"
 outer();
 inner(); //if we comment outer() the inner() will return error
 
-function outer() {
+function outer() 
+{
 
     echo "outer";
     function inner() {
@@ -36,22 +39,27 @@ function outer() {
 
 //tell PHP which type of value we expect to be returned, can be used with strict_type
 
-function test(): int {
+function test(): int 
+{
     return 1;
 } // since PHP 7.0
 
-function test2(): void {
+function test2(): void 
+{
 
 } //outputs an error when a value is returned, since PHP 7.1
 
-function test3(): ?int {
+function test3(): ?int 
+{
     return 1;
 } //returns either integer or null, since PHP 7.1
 
-function test4(): int|float {
+function test4(): int|float 
+{
     return 1;
 } //returns either int or float, since PHP 8.0
 
-function test5(): mixed {
+function test5(): mixed 
+{
     return 1;
 } //can return anything, since PHP 7.0, not good to be used
